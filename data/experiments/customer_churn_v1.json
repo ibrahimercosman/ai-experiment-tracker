@@ -1,0 +1,33 @@
+{
+  "name": "customer_churn_v1",
+  "model_name": "random_forest",
+  "training_config": {
+    "epochs": 20,
+    "learning_rate": 0.01,
+    "use_gpu": true,
+    "batch_size": null
+  },
+  "dataset": {
+    "file_name": "customers.csv",
+    "target_column": "churn",
+    "row_count": 10000,
+    "feature_count": 18,
+    "description": null,
+    "shuffle": false
+  },
+  "description": "Baseline churn experiment",
+  "status": "completed",
+  "metrics": {
+    "accuracy": 0.91,
+    "f1_score": 0.88
+  },
+  "logs": [
+    "Training started.",
+    "Dataset loaded successfully.",
+    "Training completed successfully."
+  ],
+  "tags": [
+    "classification",
+    "customer-churn"
+  ]
+}
