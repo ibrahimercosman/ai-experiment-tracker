@@ -5,6 +5,8 @@ from pathlib import Path
 from experiment import DatasetInfo, Experiment, TrainingConfig
 from storage import load_experiment, save_experiment
 
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
 
 def main() -> None:
     training_config = TrainingConfig(
@@ -38,7 +40,7 @@ def main() -> None:
     experiment.add_log("Training completed successfully.")
     experiment.update_status("completed")
 
-    file_path = Path("data/experiments/customer_churn_v1.json")
+    file_path = PROJECT_ROOT / "data" / "experiments" / "customer_churn_v1.json"
     save_experiment(experiment, file_path)
     print(f"Experiment saved to: {file_path}")
 
